@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ARIA & Tabindex Notes</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        padding: 2rem;
+      }
+      .custom-button {
+        padding: 10px 20px;
+        background-color: #333;
+        color: white;
+        display: inline-block;
+        cursor: pointer;
+      }
+      .custom-button:focus {
+        outline: 2px solid yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Accessibility Notes: ARIA & Tabindex</h1>
+
+    <!-- Example 1: Using tabindex="0" to make a non-interactive element focusable -->
+    <div tabindex="0">
+      🔹 This <code>div</code> is now keyboard focusable with
+      <code>tabindex="0"</code>.
+    </div>
+
+    <br />
+
+    <!-- Example 2: Using tabindex="-1" to make an element only focusable by JavaScript -->
+    <button id="jsFocusBtn" tabindex="-1">🔹 I can't be reached via Tab</button>
+    <button onclick="document.getElementById('jsFocusBtn').focus()">
+      Click to focus the above button with JS
+    </button>
+
+    <br /><br />
+
+    <!-- Example 3: Custom button using ARIA and tabindex -->
+    <div
+      class="custom-button"
+      role="button"
+      tabindex="0"
+      aria-label="Custom Submit Button"
+      onclick="alert('Submitted!')"
+      onkeydown="if(event.key==='Enter'){ this.click(); }"
+    >
+      🔹 Custom ARIA Button
+    </div>
+
+    <!-- Explanation:
+    - role="button" tells screen readers this is a button
+    - tabindex="0" makes it keyboard accessible
+    - aria-label gives an accessible name
+    - onkeydown handles keyboard activation (Enter key)
+  -->
+
+    <br /><br />
+
+    <!-- Example 4: ARIA-expanded for collapsible section -->
+    <button
+      id="toggleBtn"
+      aria-expanded="false"
+      aria-controls="moreInfo"
+      onclick="toggleInfo()"
+    >
+      🔹 Toggle Info
+    </button>
+    <div id="moreInfo" hidden>
+      Here's some extra information you can now see!
+    </div>
+
+    <!-- Explanation:
+    - aria-expanded tells screen readers whether the target content is expanded or not
+    - aria-controls connects the button to the content it toggles
+  -->
+
+    <br /><br />
+
+    <!-- Example 5: aria-hidden to hide from screen readers -->
+    <div aria-hidden="true">
+      🔹 This content is hidden from assistive technologies.
+    </div>
+
+    <script>
+      // JavaScript to toggle aria-expanded state and visibility
+      function toggleInfo() {
+        const btn = document.getElementById("toggleBtn");
+        const content = document.getElementById("moreInfo");
+        const isExpanded = btn.getAttribute("aria-expanded") === "true";
+
+        btn.setAttribute("aria-expanded", !isExpanded);
+        content.hidden = isExpanded;
+      }
+    </script>
+  </body>
+</html>

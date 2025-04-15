@@ -1,4 +1,4 @@
-Sure thing, Boss. Here's a **deep-dive HTML roadmap** tailored for someone with your experience level — a year into web dev — who wants to truly master the fundamentals:
+# HTML Roadmap
 
 ---
 
@@ -92,3 +92,11 @@ Sure thing, Boss. Here's a **deep-dive HTML roadmap** tailored for someone with 
 - Learn how HTML affects **Core Web Vitals**
 
 ---
+
+## Progress
+
+[✅] Phase-01
+[] Phase-02
+[] Phase-03
+[] Phase-04
+[] Phase-05

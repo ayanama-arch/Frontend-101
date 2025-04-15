@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Tag Example</title>
+  </head>
+  <body>
+    <h1>HTML5 Video Tag Example</h1>
+
+    <!-- Video with Controls -->
+    <h2>Video with Controls</h2>
+    <video src="https://www.w3schools.com/html/mov_bbb.mp4" controls>
+      Your browser does not support the video tag.
+    </video>
+    <p>
+      This video includes default controls such as play, pause, and volume
+      adjustment.
+    </p>
+
+    <!-- Autoplay and Muted -->
+    <h2>Autoplay and Muted</h2>
+    <video src="https://www.w3schools.com/html/mov_bbb.mp4" autoplay muted loop>
+      Your browser does not support the video tag.
+    </video>
+    <p>
+      This video will autoplay as soon as it can, will be muted, and will loop
+      after completion.
+    </p>
+
+    <!-- Video with Poster Image -->
+    <h2>Video with Poster Image</h2>
+    <video
+      src="https://www.w3schools.com/html/mov_bbb.mp4"
+      poster="https://via.placeholder.com/300"
+      controls
+    >
+      Your browser does not support the video tag.
+    </video>
+    <p>
+      This video has a placeholder image that appears before the video is
+      loaded.
+    </p>
+
+    <!-- Multiple Video Formats for Cross-Browser Compatibility -->
+    <h2>Multiple Video Formats</h2>
+    <video controls>
+      <source
+        src="https://www.w3schools.com/html/mov_bbb.mp4"
+        type="video/mp4"
+      />
+      <source src="https://www.w3schools.com/html/movie.ogg" type="video/ogg" />
+      <source
+        src="https://www.w3schools.com/html/movie.webm"
+        type="video/webm"
+      />
+      Your browser does not support the video tag.
+    </video>
+    <p>
+      This video includes multiple formats to ensure compatibility across
+      different browsers.
+    </p>
+
+    <!-- Inline Video (for Mobile) -->
+    <h2>Inline Video (Plays Inline on Mobile)</h2>
+    <video
+      src="https://www.w3schools.com/html/mov_bbb.mp4"
+      playsinline
+      controls
+    >
+      Your browser does not support the video tag.
+    </video>
+    <p>
+      On mobile devices, the video will play inline (within the page) rather
+      than in full-screen mode.
+    </p>
+
+    <!-- Video with Preload -->
+    <h2>Video with Preload</h2>
+    <video
+      src="https://www.w3schools.com/html/mov_bbb.mp4"
+      preload="auto"
+      controls
+    >
+      Your browser does not support the video tag.
+    </video>
+    <p>
+      The preload attribute suggests to the browser that it should load the
+      entire video as soon as possible.
+    </p>
+  </body>
+</html>

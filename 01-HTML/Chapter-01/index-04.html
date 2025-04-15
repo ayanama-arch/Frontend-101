@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Tag Example</title>
+  </head>
+  <body>
+    <h1>Image Tag Example with Comments</h1>
+
+    <!-- Basic image with src and alt -->
+    <h2>Basic Image</h2>
+    <img src="https://via.placeholder.com/300" alt="Placeholder image" />
+
+    <p>
+      This is a basic image tag with the src and alt attributes. The src
+      specifies the image path, and alt provides a description for
+      accessibility.
+    </p>
+
+    <!-- Image with lazy loading -->
+    <h2>Image with Lazy Loading</h2>
+    <img
+      src="https://via.placeholder.com/300"
+      alt="Lazy loaded image"
+      loading="lazy"
+    />
+
+    <p>
+      This image will only load when it's about to come into view on the screen
+      (lazy loading). It's beneficial for performance, especially with many
+      images on a page.
+    </p>
+
+    <!-- Image with srcset and sizes (Responsive Image) -->
+    <h2>Responsive Image</h2>
+    <img
+      src="https://via.placeholder.com/400"
+      srcset="
+        https://via.placeholder.com/400   400w,
+        https://via.placeholder.com/800   800w,
+        https://via.placeholder.com/1200 1200w
+      "
+      sizes="(max-width: 600px) 100vw, 600px"
+      alt="Responsive image"
+    />
+
+    <p>
+      This is a responsive image. The browser will choose the best image based
+      on the screen width and resolution. The sizes attribute defines how much
+      space the image should occupy depending on the viewport width.
+    </p>
+
+    <!-- Image with async decoding -->
+    <h2>Image with Async Decoding</h2>
+    <img
+      src="https://via.placeholder.com/300"
+      alt="Async decoded image"
+      decoding="async"
+    />
+
+    <p>
+      This image has async decoding enabled. It allows the browser to continue
+      rendering the page while the image is being decoded, improving perceived
+      page performance.
+    </p>
+
+    <!-- Security tips: No external user-generated images in this example, but if you were handling uploads, always sanitize and verify -->
+    <h2>Security Considerations</h2>
+    <p>
+      When dealing with user-uploaded images, ensure that you validate file
+      types and sanitize the paths to prevent any malicious content.
+    </p>
+
+    <!-- Image with object-fit (for cards, banners, etc.) -->
+    <h2>Image with object-fit</h2>
+    <div style="width: 300px; height: 200px; overflow: hidden">
+      <img
+        src="https://via.placeholder.com/300"
+        alt="Object-fit example"
+        style="width: 100%; height: 100%; object-fit: cover"
+      />
+    </div>
+
+    <p>
+      By using <code>object-fit: cover</code>, the image will cover the entire
+      area of the container, cropping the image if necessary while preserving
+      the aspect ratio.
+    </p>
+
+    <!-- Image with height and width attributes -->
+    <h2>Image with Width and Height Attributes</h2>
+    <img
+      src="https://via.placeholder.com/300"
+      alt="Image with width and height"
+      width="300"
+      height="200"
+    />
+
+    <p>
+      Adding the width and height attributes to the image helps the browser
+      allocate space for the image before it loads, improving the page layout.
+    </p>
+  </body>
+</html>

@@ -1,76 +1,216 @@
-# HTML Roadmap
+# HTML Learning Roadmap: Beginner to Advanced
 
----
+## Beginner Level
 
-## 🔥 Phase 1: Core Foundations (Revisit & Master)
+1. **HTML Basics**
 
-> Focus: Understand _what HTML is doing behind the scenes_
+   - What is HTML
+   - Structure of an HTML document
+   - DOCTYPE declaration
+   - HTML, HEAD, and BODY elements
 
-### ✅ HTML Basics (Refresh)
+2. **Text Fundamentals**
 
-- `<!DOCTYPE html>`, `<html>`, `<head>`, `<body>` — full breakdown
-- Semantic tags: `<main>`, `<section>`, `<article>`, `<aside>`, `<nav>`, `<header>`, `<footer>`
-- Inline vs Block-level elements
-- Comments, whitespace, nesting rules
+   - Headings (h1-h6)
+   - Paragraphs
+   - Bold, italic, and other text formatting
+   - Comments
 
-### ✅ Elements Deep-Dive
+3. **HTML Elements**
 
-- Headings (`<h1>` to `<h6>`), paragraphs (`<p>`), lists (`<ul>`, `<ol>`, `<li>`)
-- Links: `<a>` (attributes like `href`, `target`, `rel`, etc.)
-- Media: `<img>`, `<video>`, `<audio>`, `<source>`, `alt` text importance
-- Tables: `<table>`, `<tr>`, `<td>`, `<th>`, `colspan`, `rowspan`, accessibility
-- Forms: See next phase
+   - Block vs. inline elements
+   - DIVs and SPANs
+   - Line breaks and horizontal rules
 
----
+4. **Links and Navigation**
 
-## ⚙️ Phase 2: Advanced Structures + Forms
+   - Anchor tags
+   - Relative vs. absolute URLs
+   - Email links
+   - Link targets
 
-> Focus: Complex HTML + Form mastery
+5. **Lists**
 
-### ✅ Forms Deep-Dive
+   - Ordered lists
+   - Unordered lists
+   - Definition lists
+   - Nested lists
 
-- Form tags: `<form>`, `<input>`, `<select>`, `<textarea>`, `<label>`, `<fieldset>`, `<legend>`
-- Input types: `text`, `email`, `password`, `number`, `date`, `color`, `range`, `checkbox`, `radio`, `file`, etc.
-- Attributes: `name`, `id`, `placeholder`, `value`, `required`, `min`, `max`, `pattern`
-- HTML5 form validation
-- Accessibility: `aria-*`, `for` attribute, form flow, screen readers
+6. **Images**
 
----
+   - Image syntax and attributes
+   - Alt text
+   - Image dimensions
+   - Image formats
 
-## 🧠 Phase 3: Semantics + Accessibility (Real HTML power)
+7. **Basic Tables**
 
-> Focus: Write HTML that's readable by humans **and** machines (screen readers, bots)
+   - Table structure
+   - Headers and data cells
+   - Basic styling
 
-### ✅ Semantic HTML
+8. **Simple Forms**
+   - Form structure
+   - Basic input types
+   - Labels
+   - Submit buttons
 
-- Why `<section>` ≠ `<div>`
-- Proper heading structure for screen readers
-- Landmarks (`<main>`, `<nav>`, `<footer>`, etc.) and how they help
+## Intermediate Level
 
-### ✅ Accessibility (a11y)
+9. **HTML5 Fundamentals**
 
-- `alt`, `aria-label`, `aria-hidden`, `role`
-- Keyboard navigation
-- Skip to content links
-- WAI-ARIA basics
+   - New doctype
+   - Semantic elements overview
+   - Browser compatibility
 
----
+10. **Semantic HTML**
 
-## 📚 Phase 4: SEO + Metadata + Structure
+    - Header, footer, nav
+    - Article, section
+    - Aside, figure, figcaption
+    - Main, time
 
-> Focus: Make HTML useful for search engines and social platforms
+11. **Advanced Forms**
 
-### ✅ HTML for SEO
+    - New input types (date, email, etc.)
+    - Form validation attributes
+    - Datalist
+    - Fieldset and legend
 
-- Correct tag hierarchy
-- `<title>`, `<meta>` tags (`description`, `keywords`, `viewport`, `robots`)
-- Open Graph tags (`og:title`, `og:image`, etc.)
-- Twitter Cards meta
-- Structured data (Schema.org basics)
+12. **Advanced Tables**
 
----
+    - Table sections (thead, tbody, tfoot)
+    - Column and row spanning
+    - Caption
+    - Accessibility features
 
-## 🧪 Phase 5: Practice Projects
+13. **Media Elements**
+
+    - Audio element
+    - Video element
+    - Source elements
+    - Track element for captions
+
+14. **Embedded Content**
+
+    - iframes
+    - Object and embed
+    - SVG basics
+    - Canvas introduction
+
+15. **Metadata**
+
+    - Meta tags
+    - Open Graph protocol
+    - Twitter cards
+    - Favicon
+
+16. **HTML Entities & Special Characters**
+    - Character entities
+    - Reserved characters
+    - Symbols and icons
+    - Unicode characters
+
+## Advanced Level
+
+17. **Accessibility (a11y)**
+
+    - ARIA roles
+    - ARIA states and properties
+    - Focus management
+    - Screen reader considerations
+    - manifest.json
+
+18. **Responsive Images**
+
+    - Picture element
+    - Srcset attribute
+    - Sizes attribute
+    - Art direction vs. resolution switching
+
+19. **Web Components Basics**
+
+    - Custom elements
+    - Shadow DOM
+    - HTML templates
+    - HTML imports (deprecated but conceptually important)
+
+20. **Interactive Elements**
+
+    - Details and summary
+    - Dialog element
+    - Popover API
+    - Output element
+
+21. **Forms Deep Dive**
+
+    - Custom form validation
+    - Form events
+    - FormData API
+    - Form-associated custom elements
+
+22. **Performance Optimization**
+
+    - Resource hints (preload, prefetch)
+    - Lazy loading attributes
+    - Async and defer attributes
+    - Critical rendering path
+
+23. **Security Features**
+
+    - Content Security Policy
+    - Subresource Integrity
+    - Sandbox attribute
+    - Referrer policy
+
+24. **Advanced Media Features**
+    - Media fragments
+    - Media capture
+    - Picture-in-picture
+    - Media session API
+
+## Expert Level
+
+25. **HTML Internationalization**
+
+    - Language attributes
+    - Directionality
+    - Unicode bidirectional algorithm
+    - Ruby annotations
+
+26. **Advanced SVG Integration**
+
+    - Inline SVG
+    - SVG animation
+    - SVG filters
+    - SVG accessibility
+
+27. **Progressive Enhancement**
+
+    - Feature detection
+    - Fallback strategies
+    - Polyfills
+    - Graceful degradation
+
+28. **Microdata & Structured Data**
+
+    - Schema.org vocabulary
+    - JSON-LD
+    - RDFa
+    - Microformats
+
+29. **Cutting-edge APIs**
+
+    - View transitions
+    - Speculation rules
+    - Core Web Vitals optimization
+    - HTML fragments
+
+30. **Browser Rendering Internals**
+    - DOM tree construction
+    - CSSOM integration
+    - Render tree
+    - Layout and painting
 
 > Focus: Apply everything
 
@@ -95,8 +235,8 @@
 
 ## Progress
 
-[✅] Phase-01
-[] Phase-02
-[] Phase-03
-[] Phase-04
-[] Phase-05
+[✅] Beginner Level
+[] Intermediate Level
+[] Advance Level
+[] Expert Level
+[] Projects

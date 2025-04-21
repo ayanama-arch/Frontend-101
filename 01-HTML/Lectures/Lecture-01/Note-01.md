@@ -1,4 +1,8 @@
----
+# Lecture-01
+
+## Basic Blocks of HTML
+
+Before Deep diving in html let's start from the basics and fundamental blocks of html.
 
 ### 🔎 **1. SGML (Standard Generalized Markup Language)**
 

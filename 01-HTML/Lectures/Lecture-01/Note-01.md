@@ -2,8 +2,6 @@
 
 ## Basic Blocks of HTML
 
-Before Deep diving in html let's start from the basics and fundamental blocks of html.
-
 ### 🔎 **1. SGML (Standard Generalized Markup Language)**
 
 - **Definition**: SGML is a **standard** for defining markup languages, used to describe documents in a machine-readable way.
@@ -104,7 +102,7 @@ div {
 
 ---
 
-### 🔑 **9. Practical Tips**:
+### 🔑 **9. Practical Tips**
 
 1. Always include the `<!DOCTYPE html>` in your HTML files to avoid **quirks mode**.
 2. Use **standards mode** to ensure cross-browser consistency.

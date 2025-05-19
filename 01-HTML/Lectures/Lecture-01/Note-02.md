@@ -39,7 +39,7 @@
 - **CSSOM**: A structure representing the CSS rules and their associated styles (e.g., `color`, `font-size`).
 - **CSSOM** stores how elements should look visually.
 
-#### **Example of Real CSSOM**:
+#### **Example of Real CSSOM**
 
 ```javascript
 {

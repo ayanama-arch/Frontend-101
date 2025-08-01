@@ -1,0 +1,53 @@
+# Node.js dependencies
+node_modules/
+**/node_modules/
+
+# Build outputs (React, Vite, Next.js, Parcel)
+build/
+dist/
+.next/
+out/
+.cache/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# OS/system files
+.DS_Store
+Thumbs.db
+
+# Editor/IDE settings
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Coverage/test results
+coverage/
+*.lcov
+
+# ESLint, Prettier, Stylelint cache
+.eslintcache
+.prettiercache
+
+# Misc
+*.local
+*.lock
+*.bak
+*.tmp
+*.swp
+
+# Storybook
+storybook-static/
+
+# Netlify/Vercel deployment dirs
+.netlify/
+.vercel/

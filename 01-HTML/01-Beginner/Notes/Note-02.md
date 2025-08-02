@@ -63,6 +63,9 @@
 - The **Render Tree** includes only the elements that are visible (i.e., displayable on the screen), with styles applied.
 - This is what the browser uses to render the page.
 
+**_NOTE_**
+The **Render Tree includes the entire visible content of the current HTML document**, even if it's outside the viewport, but the browser **only paints what's visible** and loads more as you scroll. Each HTML page (like Home, About) builds its **own separate Render Tree**.
+
 #### **Render Tree (Simplified)**:
 
 ```javascript
@@ -254,10 +257,15 @@ The `rel` attribute defines the relationship between the current document and th
    - **Purpose**: Prevents the new page from accessing the `window.opener` property, enhancing security when using `target="_blank"`.
    - **Use Case**: Open external links in new tabs without risk of malicious manipulation.
    - **Example**:
+
      ```html
      <a href="https://example.com" target="_blank" rel="noopener"
        >Visit Example</a
      >
+
+     <!-- What is Not safe -->
+     <!-- Here in the opened page new page can access original page using window.opener -->
+     <a href="./attacker.html" target="_blank" rel="opener">Visit Link</a>
      ```
 
 2. **`noreferrer`**:

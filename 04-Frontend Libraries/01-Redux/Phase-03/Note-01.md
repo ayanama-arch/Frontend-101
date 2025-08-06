@@ -1,5 +1,3 @@
-To be continued...
-
 # RTK Query
 
 ## APIs

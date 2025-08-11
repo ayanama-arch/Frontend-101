@@ -14,6 +14,13 @@ export const incrementIfOdd = (amount: number): AppThunk => {
   };
 };
 
+// export const thunkFunction = (a, b) => {
+//   console.log("A: ", a)
+//   console.log("B: ", b)
+//   console.log("Counter: ", b().counter.count)
+//   a(increment())
+// }
+
 export interface CounterState {
   count: number;
   status: "idle" | "loading" | "failed";

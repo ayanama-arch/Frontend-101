@@ -11,10 +11,12 @@ import {
   type TypedUseSelectorHook,
 } from "react-redux";
 import type { ReactNode } from "react";
+import todoReducer from "./reducers/todoReducer";
 
-const store = configureStore({
+export const store = configureStore({
   reducer: {
     counter: countReducer,
+    todos:todoReducer
   },
 });
 

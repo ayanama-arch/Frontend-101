@@ -1,0 +1,84 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Wireless Bluetooth Headphones",
+      "price": 233,
+      "category": "Electronics",
+      "inStock": true,
+      "rating": 4.5
+    },
+    {
+      "id": "2",
+      "name": "Smart LED TV 43 inch",
+      "price": 24999,
+      "category": "Electronics",
+      "inStock": true,
+      "rating": 4.2
+    },
+    {
+      "id": "3",
+      "name": "Gaming Laptop",
+      "price": 84999,
+      "category": "Computers",
+      "inStock": false,
+      "rating": 4.8
+    },
+    {
+      "id": "4",
+      "name": "Office Chair Ergonomic",
+      "price": 7999,
+      "category": "Furniture",
+      "inStock": true,
+      "rating": 4.1
+    },
+    {
+      "id": "5",
+      "name": "Stainless Steel Water Bottle",
+      "price": 599,
+      "category": "Home & Kitchen",
+      "inStock": true,
+      "rating": 4.7
+    },
+    {
+      "id": "6",
+      "name": "Wireless Gaming Mouse",
+      "price": 1999,
+      "category": "Electronics",
+      "inStock": false,
+      "rating": 4.6
+    },
+    {
+      "id": "f3f9",
+      "name": "New Phone",
+      "price": 599,
+      "category": "Electronics",
+      "inStock": true,
+      "rating": 4.5
+    },
+    {
+      "id": "c85f",
+      "name": "New Phone",
+      "price": 599,
+      "category": "Electronics",
+      "inStock": true,
+      "rating": 4.5
+    },
+    {
+      "id": "9710",
+      "name": "New Phone",
+      "price": 599,
+      "category": "Electronics",
+      "inStock": true,
+      "rating": 4.5
+    },
+    {
+      "id": "53a2",
+      "name": "New Phone",
+      "price": 599,
+      "category": "Electronics",
+      "inStock": true,
+      "rating": 4.5
+    }
+  ]
+}

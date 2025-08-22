@@ -1,0 +1,32 @@
+.navigation {
+  height: 72px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid gray;
+}
+
+.logo {
+  cursor: pointer;
+}
+
+.nav_links {
+  display: flex;
+  gap: 2em;
+  align-items: center;
+  list-style-type: none;
+}
+
+.nav_links li a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+  border-bottom: 2px solid transparent;
+  font-weight: 600;
+  transition: 0.2s ease-in-out;
+}
+
+.nav_links li a:hover {
+  color: rgb(73, 73, 73);
+  border-bottom: 2px solid black;
+  transition: 0.2s ease-in-out;
+}

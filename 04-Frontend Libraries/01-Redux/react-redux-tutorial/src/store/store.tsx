@@ -12,12 +12,16 @@ import {
 } from "react-redux";
 import type { ReactNode } from "react";
 import todoReducer from "./reducers/todoReducer";
+import { productsApi } from "./reducers/productsReducer";
 
 export const store = configureStore({
   reducer: {
     counter: countReducer,
-    todos:todoReducer
+    todos: todoReducer,
+    [productsApi.reducerPath]: productsApi.reducer,
   },
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware().concat(productsApi.middleware),
 });
 
 // STORE TYPES

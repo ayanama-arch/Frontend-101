@@ -1,0 +1,63 @@
+.contact_form {
+  display: flex;
+}
+
+.left_section {
+  min-width: 50%;
+}
+
+.form_section * {
+  width: 100%;
+}
+
+.top_btn {
+  display: flex;
+  justify-content: space-between;
+  gap: 4rem;
+}
+
+.email_btn {
+  width: 100%;
+}
+
+.form_control {
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 2em 0;
+}
+
+.form_control label {
+  width: fit-content;
+  padding: 0.2em;
+  position: absolute;
+  left: 0.5em;
+  font-weight: 600;
+  top: -0.8em;
+  display: inline-block;
+  z-index: 100;
+  background-color: white;
+}
+
+form input,
+textarea {
+  font-size: 1.6rem;
+  padding: 0.5em 0.6em;
+  font-weight: 500;
+  color: rgb(49, 49, 49);
+  padding-top: 1em;
+}
+.form_details button {
+  width: 50%;
+}
+
+.form_image img {
+  height: 95%;
+}
+
+button {
+  cursor: pointer;
+}

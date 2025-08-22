@@ -1,0 +1,15 @@
+.contact_header {
+  width: 80%;
+}
+
+.contact_header h1 {
+  font-weight: 800;
+  font-size: 4.8rem;
+  text-transform: uppercase;
+  line-height: 100%;
+}
+
+.contact_header p {
+  color: rgb(66, 66, 66);
+  font-weight: 500;
+}

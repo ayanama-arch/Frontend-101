@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Navbar Styling */
+
+nav.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0px 2px 10px 2px #ccc;
+    padding: 1rem;
+    align-items: center;
+}
+
+img.nav-image {
+    height: 50px;
+    width: 80px;
+
+}
+
+ul.nav-elements {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+}
+
+ul.nav-elements>li {
+    padding-right: 2rem;
+
+}
+
+
+/* Search Bar */
+
+.search-bar {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    margin: 1rem 2rem;
+    display: flex;
+}
+
+.search-input {
+    width: 80%;
+    padding: 0.5rem;
+    font-size: large;
+}
+
+.search-btn {
+    width: 10%;
+    padding: 0.5rem;
+    font-size: large;
+}
+
+/* Restaurant list */
+
+.restaurant-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.restaurant-card {
+    max-width: 280px;
+    margin: 2rem;
+    box-shadow: 0px 0px 10px 2px #acaaaa;
+    border-radius: 10px;
+    transition: 0.2s ease-in-out;
+}
+
+.restaurant-card:hover {
+    transform: scale(1.05);
+    transition: 0.2s ease-in-out;
+}
+
+.restaurant-card img {
+    width: 100%;
+    max-height: 250px;
+    padding-bottom: 1rem;
+}
+
+.restaurant-card-text {
+    padding: 1rem;
+}
+
+.restaurant-card-text>h2 {
+    font-weight: 400;
+    border-bottom: 2px solid #ccc;
+    display: inline-block;
+    margin-bottom: 2px;
+}
+
+.restaurant-card-text>h4 {
+    font-weight: 200;
+    border-bottom: 2px solid #ccc;
+}
+
+/* SHIMMER */
+
+.shimmer-card {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.restaurant-card-shimmer {
+    min-width: 280px;
+    margin: 2rem;
+    box-shadow: 0px 0px 10px 2px #acaaaa;
+    border-radius: 10px;
+    height: 20rem;
+}

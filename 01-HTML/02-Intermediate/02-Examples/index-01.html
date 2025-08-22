@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HTML5 Semantics – Practical Demo & Explanations</title>
+  <style>
+    /* Minimal, readable styles for the demo */
+    :root { --ink:#111; --muted:#666; --bg:#fafafa; --accent:#0b5fff; }
+    html, body { margin:0; padding:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color: var(--ink); background: var(--bg); }
+    header, nav, main, section, article, aside, footer { display: block; }
+    .wrap { max-width: 980px; margin: 0 auto; padding: 1.5rem; }
+    header { background: white; border-bottom: 1px solid #eaeaea; position: sticky; top: 0; z-index: 10; }
+    header .brand { font-weight: 800; letter-spacing: .2px; }
+    nav ul { list-style: none; padding: 0; display: flex; gap: 1rem; }
+    nav a { text-decoration: none; color: var(--ink); }
+    nav a:hover { color: var(--accent); }
+    .grid { display: grid; grid-template-columns: 1fr; gap: 1.25rem; }
+    @media (min-width: 900px) { .grid { grid-template-columns: 2fr 1fr; } }
+    article { background: white; border: 1px solid #eaeaea; border-radius: 12px; padding: 1rem 1.25rem; }
+    article + article { margin-top: 1rem; }
+    figure { margin: 0; }
+    figcaption { color: var(--muted); font-size: .9rem; }
+    aside { background: #fffdf7; border: 1px solid #f1e9c9; border-radius: 12px; padding: 1rem 1.25rem; }
+    footer { margin-top: 2rem; padding: 2rem 0; color: var(--muted); border-top: 1px solid #eaeaea; }
+    .note { color: var(--muted); font-size: .95rem; }
+    .kbd { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; background:#f1f1f1; padding:.1rem .35rem; border-radius:4px; }
+    .tag { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; background:#eef4ff; border:1px dashed #c9dafd; padding:.1rem .35rem; border-radius:4px; }
+  </style>
+</head>
+<body>
+  <!--
+    <header>
+    -----------------------------
+    Represents introductory content for a page OR a section.
+    Often contains branding, logo, top navigation, site-wide search, etc.
+    It's semantic; by default it's just a block-level element.
+  -->
+  <header>
+    <div class="wrap">
+      <div class="brand">Semantics Daily</div>
+      <p class="note">The <span class="tag">&lt;header&gt;</span> introduces the page: branding + quick context. You can also have headers inside <section> or <article> to introduce those parts.</p>
+
+      <!--
+        <nav>
+        -----------------------------
+        Denotes major navigational links. Not every list of links is a nav.
+        Use for primary/secondary site navigation. Assistive tech recognizes it.
+      -->
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#articles">Articles</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!--
+    <main>
+    -----------------------------
+    The unique, central content of the page. There should be only ONE <main> per page.
+    Skip repeated elements like nav, headers, footers. Improves screen reader 'skip to main' behavior.
+  -->
+  <main id="home">
+    <div class="wrap grid">
+      <section aria-labelledby="featured">
+        <!--
+          <section>
+          -----------------------------
+          Thematic grouping of related content. Use when you would add a heading.
+        -->
+        <h2 id="featured">Featured Content (<span class="tag">&lt;section&gt;</span>)</h2>
+        <p class="note">Use <span class="tag">&lt;section&gt;</span> for grouping related content with a heading. If it could stand alone (e.g., a blog post), consider <span class="tag">&lt;article&gt;</span> instead.</p>
+
+        <!--
+          <article>
+          -----------------------------
+          Self-contained piece that could be syndicated or stand on its own: a blog post, news item, forum post.
+          Can contain its own header/footer.
+        -->
+        <article id="articles">
+          <header>
+            <h3>Why Semantics Matter</h3>
+            <p class="note">This <span class="tag">&lt;article&gt;</span> has its own <span class="tag">&lt;header&gt;</span>—totally valid. Articles are portable units.</p>
+          </header>
+
+          <!--
+            <figure> + <figcaption>
+            -----------------------------
+            Groups media (images, diagrams, code samples, charts) with an optional caption that describes it.
+            Assistive tech and search engines associate the caption with the media.
+          -->
+          <figure>
+            <img src="https://via.placeholder.com/800x360" alt="Wireframe of a page with header, main, sidebar, and footer" />
+            <figcaption>Figure 1: A simple layout demonstrating header, main content, sidebar, and footer.</figcaption>
+          </figure>
+
+          <p>Semantic HTML clarifies intent for machines and humans. Search engines, screen readers, and your future self will thank you. It doesn’t change visuals by itself; your CSS does that. But semantics shape structure and meaning.</p>
+
+          <!--
+            <time>
+            -----------------------------
+            Provides a machine-readable timestamp via the datetime attribute.
+            Useful for events, publish dates, deadlines. Helps SEO and microdata.
+          -->
+          <p>Published on <time datetime="2025-08-22">August 22, 2025</time>. Last updated <time datetime="2025-08-20T14:30:00+05:30">2 days ago</time>.</p>
+
+          <!--
+            <mark>
+            -----------------------------
+            Highlights text as relevant in a specific context (e.g., search result highlight).
+          -->
+          <p>When auditing, <mark>highlight</mark> places where generic <span class="tag">&lt;div&gt;</span> can be upgraded to semantic elements.</p>
+
+          <footer>
+            <p class="note">Article footer: tags, author info, or related links often live here.</p>
+          </footer>
+        </article>
+
+        <article>
+          <header>
+            <h3>Section vs. Article—Quick Rule of Thumb</h3>
+          </header>
+          <p><strong>Article</strong> can be lifted and reused elsewhere without losing meaning (like a standalone blog post). <strong>Section</strong> is a thematic chunk inside a larger context and usually needs that context to make sense.</p>
+          <footer>
+            <p class="note">If you wouldn’t share it as a separate unit, it’s probably a section, not an article.</p>
+          </footer>
+        </article>
+      </section>
+
+      <!--
+        <aside>
+        -----------------------------
+        Tangential content: sidebars, pull quotes, callouts, related links, ads. It’s related but not core to the main narrative.
+      -->
+      <aside aria-labelledby="sidebar">
+        <h2 id="sidebar">Sidebar (<span class="tag">&lt;aside&gt;</span>)</h2>
+        <p class="note">Use <span class="tag">&lt;aside&gt;</span> for content adjacent to the main flow—related posts, newsletter signup, small tools.</p>
+        <ul>
+          <li><a href="#">Related: Accessibility Checklist</a></li>
+          <li><a href="#">Guide: Landmarks & Screen Readers</a></li>
+          <li><a href="#">SEO: Schema & Structured Data</a></li>
+        </ul>
+
+        <figure>
+          <img src="https://via.placeholder.com/360x200" alt="Colorful sticky notes representing ideas" />
+          <figcaption>Ideas board—nice aside content that complements, not replaces, the article.</figcaption>
+        </figure>
+      </aside>
+    </div>
+  </main>
+
+  <!--
+    <footer>
+    -----------------------------
+    Concluding or supplemental content for the page or a section. Common spot for copyright, site map links, contact, legal.
+  -->
+  <footer>
+    <div class="wrap">
+      <p>&copy; <time datetime="2025">2025</time> Semantics Daily. All rights reserved.</p>
+      <p class="note">This is the page-level <span class="tag">&lt;footer&gt;</span>. Articles and sections can have their own footers too.</p>
+    </div>
+  </footer>
+</body>
+</html>

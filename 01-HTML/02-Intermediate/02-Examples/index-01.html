@@ -4,29 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>HTML5 Semantics – Practical Demo & Explanations</title>
-  <style>
-    /* Minimal, readable styles for the demo */
-    :root { --ink:#111; --muted:#666; --bg:#fafafa; --accent:#0b5fff; }
-    html, body { margin:0; padding:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color: var(--ink); background: var(--bg); }
-    header, nav, main, section, article, aside, footer { display: block; }
-    .wrap { max-width: 980px; margin: 0 auto; padding: 1.5rem; }
-    header { background: white; border-bottom: 1px solid #eaeaea; position: sticky; top: 0; z-index: 10; }
-    header .brand { font-weight: 800; letter-spacing: .2px; }
-    nav ul { list-style: none; padding: 0; display: flex; gap: 1rem; }
-    nav a { text-decoration: none; color: var(--ink); }
-    nav a:hover { color: var(--accent); }
-    .grid { display: grid; grid-template-columns: 1fr; gap: 1.25rem; }
-    @media (min-width: 900px) { .grid { grid-template-columns: 2fr 1fr; } }
-    article { background: white; border: 1px solid #eaeaea; border-radius: 12px; padding: 1rem 1.25rem; }
-    article + article { margin-top: 1rem; }
-    figure { margin: 0; }
-    figcaption { color: var(--muted); font-size: .9rem; }
-    aside { background: #fffdf7; border: 1px solid #f1e9c9; border-radius: 12px; padding: 1rem 1.25rem; }
-    footer { margin-top: 2rem; padding: 2rem 0; color: var(--muted); border-top: 1px solid #eaeaea; }
-    .note { color: var(--muted); font-size: .95rem; }
-    .kbd { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; background:#f1f1f1; padding:.1rem .35rem; border-radius:4px; }
-    .tag { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; background:#eef4ff; border:1px dashed #c9dafd; padding:.1rem .35rem; border-radius:4px; }
-  </style>
 </head>
 <body>
   <!--
@@ -37,9 +14,9 @@
     It's semantic; by default it's just a block-level element.
   -->
   <header>
-    <div class="wrap">
-      <div class="brand">Semantics Daily</div>
-      <p class="note">The <span class="tag">&lt;header&gt;</span> introduces the page: branding + quick context. You can also have headers inside <section> or <article> to introduce those parts.</p>
+    <div >
+      <div >Semantics Daily</div>
+      <p>The <span>&lt;header&gt;</span> introduces the page: branding + quick context. You can also have headers inside <section> or <article> to introduce those parts.</p>
 
       <!--
         <nav>
@@ -107,7 +84,7 @@
             Useful for events, publish dates, deadlines. Helps SEO and microdata.
           -->
           <p>Published on <time datetime="2025-08-22">August 22, 2025</time>. Last updated <time datetime="2025-08-20T14:30:00+05:30">2 days ago</time>.</p>
-
+            
           <!--
             <mark>
             -----------------------------

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advanced Forms</title>
+  </head>
+  <body>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Apples</td>
+          <td>$5</td>
+        </tr>
+        <tr>
+          <td>Oranges</td>
+          <td>$7</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>Total</td>
+          <td>$12</td>
+        </tr>
+      </tfoot>
+    </table>
+    <table border="1">
+      <tr>
+        <th rowspan="2">Name</th>
+        <th colspan="2">Scores</th>
+      </tr>
+      <tr>
+        <th>Math</th>
+        <th>Science</th>
+      </tr>
+      <tr>
+        <td>Ayan</td>
+        <td>90</td>
+        <td>85</td>
+      </tr>
+    </table>
+
+    <table border="1">
+      <caption>
+        Student Marks Table
+      </caption>
+      <tr>
+        <th>Name</th>
+        <th>Marks</th>
+      </tr>
+      <tr>
+        <td>Ayan</td>
+        <td>95</td>
+      </tr>
+    </table>
+
+    <form>
+      <fieldset>
+        <legend>Personal Information</legend>
+        Name: <input type="text" name="name" /><br />
+        Email: <input type="email" name="email" /><br />
+        Age: <input type="number" name="age" />
+      </fieldset>
+
+      <fieldset>
+        <legend>Preferences</legend>
+        Favorite Color: <input type="color" name="color" /><br />
+        Receive Newsletter: <input type="checkbox" name="newsletter" />
+      </fieldset>
+
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>

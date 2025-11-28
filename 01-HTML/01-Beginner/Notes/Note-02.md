@@ -339,3 +339,7 @@ The `rel` attribute defines the relationship between the current document and th
 - Always use `rel="noopener noreferrer"` when opening links in new tabs (`target="_blank"`).
 - Use `rel="nofollow"` for untrusted, user-generated, or paid links.
 - Use `rel="canonical"` to avoid duplicate content penalties.
+
+## **_rel_** Values
+
+`noopener`,`noreferrer`,`nofollow`,`stylesheet`,`icon`,`prev`,`next`,`alternate`,`canonical`

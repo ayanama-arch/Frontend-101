@@ -1,0 +1,8 @@
+Accesibility
+
+14. **Embedded Content** 🛑
+
+    - iframes
+    - Object and embed
+    - SVG basics
+    - Canvas introduction

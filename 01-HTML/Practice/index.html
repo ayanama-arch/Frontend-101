@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Custom Element Demo</title>
+
+    <style>
+      details {
+        width: 100%;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        padding: 0;
+        background: #f8f8f8;
+        transition: all 0.25s ease;
+      }
+
+      details summary {
+        cursor: pointer;
+        padding: 12px 16px;
+        font-weight: 600;
+        list-style: none;
+        user-select: none;
+        position: relative;
+      }
+
+      details summary::-webkit-details-marker {
+        display: none;
+      }
+
+      details summary::after {
+        content: "▶";
+        position: absolute;
+        right: 16px;
+        transition: transform 0.3s ease;
+        font-size: 0.9rem;
+      }
+
+      details[open] summary::after {
+        transform: rotate(90deg);
+      }
+
+      details > *:not(summary) {
+        padding: 12px 16px;
+        border-top: 1px solid #ddd;
+        animation: fade 0.25s ease;
+      }
+
+      @keyframes fade {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+    </style>
+
+    <script>
+      // Define a custom element <hello-box>
+      class HelloBox extends HTMLElement {
+        constructor() {
+          super();
+          const shadow = this.attachShadow({ mode: "open" });
+
+          const wrapper = document.createElement("div");
+          wrapper.textContent = "Hello from a Custom Element!";
+          wrapper.style.padding = "12px";
+          wrapper.style.background = "#4e9fff";
+          wrapper.style.color = "white";
+          wrapper.style.fontFamily = "sans-serif";
+          wrapper.style.borderRadius = "6px";
+
+          shadow.appendChild(wrapper);
+        }
+      }
+
+      // Register the custom element
+      customElements.define("hello-box", HelloBox);
+    </script>
+  </head>
+
+  <body>
+    <h2>Custom Element Example</h2>
+
+    <!-- Using the custom element -->
+    <!-- <hello-box></hello-box>
+    <hello-box>Welcome</hello-box> -->
+
+    <details>
+      <summary>Show more</summary>
+      <p>This is extra information, Boss.</p>
+    </details>
+
+    <button onclick="myDialog.showModal()">Open Dialog</button>
+
+    <dialog id="myDialog">
+      <p>This is a dialog box.</p>
+      <button onclick="myDialog.close()">Close</button>
+    </dialog>
+
+    <button popovertarget="info">Show Info</button>
+
+    <div id="info" popover>This is a popover box.</div>
+
+    <form oninput="result.value = parseInt(a.value) + parseInt(b.value)">
+      <input type="number" id="a" value="5" /> +
+      <input type="number" id="b" value="3" /> =
+      <output name="result">8</output>
+    </form>
+
+    <script>
+      navigator.mediaSession.metadata = new MediaMetadata({
+        title: "Boss' Podcast",
+        artist: "Ayan",
+        album: "Season 1",
+        artwork: [{ src: "cover.png", sizes: "512x512", type: "image/png" }],
+      });
+
+      navigator.mediaSession.setActionHandler("play", () => {
+        audio.play();
+      });
+
+      navigator.mediaSession.setActionHandler("pause", () => {
+        audio.pause();
+      });
+    </script>
+  </body>
+</html>

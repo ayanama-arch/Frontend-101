@@ -1,10 +1,10 @@
----
-
 ### 🔎 **1. SGML (Standard Generalized Markup Language)**
 
 - **Definition**: SGML is a **standard** for defining markup languages, used to describe documents in a machine-readable way.
 - **Purpose**: It allows users to define custom tags, making documents flexible.
 - **DTD** (Document Type Definition): SGML requires a DTD to define the structure and rules of a document.
+
+`Note` Modern browsers have DTD inside the engine.
 
 ---
 
@@ -97,6 +97,16 @@ div {
 
 - **Purpose**: Tells the browser to render the page in **standards mode**.
 - **Key Detail**: **No DTD** behind it — just a mode indicator.
+
+Here you go, Boss — concise **pointer notes** for your revision 👇
+
+#### 🧭 HTML DOCTYPE Modes — Quick Notes
+
+- `<!DOCTYPE html>` triggers **Standards Mode** (`document.compatMode = "CSS1Compat"`).
+- **Omitting DOCTYPE** triggers **Quirks Mode** (`document.compatMode = "BackCompat"`).
+- In **Standards Mode**, CSS follows modern W3C rules (e.g., `height:100%` = parent height).
+- In **Quirks Mode**, browser uses old IE5-style behavior (`height:100%` = viewport height).
+- Always use DOCTYPE to ensure consistent, predictable rendering across browsers.
 
 ---
 
